@@ -10,6 +10,7 @@ import type { DocSearchProps } from './DocSearch';
 import type { FooterTranslations } from './Footer';
 import { Footer } from './Footer';
 import { Hit } from './Hit';
+import { localSearch } from './localSearch';
 import type { ScreenStateTranslations } from './ScreenState';
 import { ScreenState } from './ScreenState';
 import type { SearchBoxTranslations } from './SearchBox';
@@ -21,7 +22,6 @@ import type {
   InternalDocSearchHit,
   StoredDocSearchHit,
 } from './types';
-import { useSearchClient } from './useSearchClient';
 import { useTouchEvents } from './useTouchEvents';
 import { useTrapFocus } from './useTrapFocus';
 import {
@@ -49,7 +49,6 @@ export function DocSearchModal({
   apiKey,
   indexName,
   placeholder = 'Search docs',
-  searchParameters,
   maxResultsPerGroup,
   onClose = noop,
   transformItems = identity,
@@ -57,7 +56,6 @@ export function DocSearchModal({
   resultsFooterComponent = () => null,
   navigator,
   initialScrollY = 0,
-  transformSearchClient = identity,
   disableUserPersonalization = false,
   initialQuery: initialQueryFromProp = '',
   translations = {},
@@ -96,7 +94,6 @@ export function DocSearchModal({
     initialQueryFromProp || initialQueryFromSelection
   ).current;
 
-  const searchClient = useSearchClient(appId, apiKey, transformSearchClient);
   const favoriteSearches = React.useRef(
     createStoredSearches<StoredDocSearchHit>({
       key: `__DOCSEARCH_FAVORITE_SEARCHES__${indexName}`,
@@ -221,57 +218,16 @@ export function DocSearchModal({
             ];
           }
 
-          const insightsActive = Boolean(insights);
+          const insightsActive = false;
 
-          return searchClient
-            .search<DocSearchHit>([
-              {
-                query,
-                indexName,
-                params: {
-                  attributesToRetrieve: [
-                    'hierarchy.lvl0',
-                    'hierarchy.lvl1',
-                    'hierarchy.lvl2',
-                    'hierarchy.lvl3',
-                    'hierarchy.lvl4',
-                    'hierarchy.lvl5',
-                    'hierarchy.lvl6',
-                    'content',
-                    'type',
-                    'url',
-                  ],
-                  attributesToSnippet: [
-                    `hierarchy.lvl1:${snippetLength.current}`,
-                    `hierarchy.lvl2:${snippetLength.current}`,
-                    `hierarchy.lvl3:${snippetLength.current}`,
-                    `hierarchy.lvl4:${snippetLength.current}`,
-                    `hierarchy.lvl5:${snippetLength.current}`,
-                    `hierarchy.lvl6:${snippetLength.current}`,
-                    `content:${snippetLength.current}`,
-                  ],
-                  snippetEllipsisText: '…',
-                  highlightPreTag: '<mark>',
-                  highlightPostTag: '</mark>',
-                  hitsPerPage: 20,
-                  clickAnalytics: insightsActive,
-                  ...searchParameters,
-                },
-              },
-            ])
+          return localSearch(query)
             .catch((error) => {
-              // The Algolia `RetryError` happens when all the servers have
-              // failed, meaning that there's no chance the response comes
-              // back. This is the right time to display an error.
-              // See https://github.com/algolia/algoliasearch-client-javascript/blob/2ffddf59bc765cd1b664ee0346b28f00229d6e12/packages/transporter/src/errors/createRetryError.ts#L5
-              if (error.name === 'RetryError') {
-                setStatus('error');
-              }
-
+              setStatus('error');
               throw error;
             })
             .then(({ results }) => {
-              const firstResult = results[0] as SearchResponse<DocSearchHit>;
+              const firstResult =
+                results[0] as unknown as SearchResponse<DocSearchHit>;
               const { hits, nbHits } = firstResult;
               const sources = groupBy<DocSearchHit>(
                 hits,
@@ -360,9 +316,7 @@ export function DocSearchModal({
       }),
     [
       indexName,
-      searchParameters,
       maxResultsPerGroup,
-      searchClient,
       onClose,
       recentSearches,
       favoriteSearches,

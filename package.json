@@ -36,7 +36,8 @@
     "watch": "lerna run watch --parallel --scope @docsearch/*",
     "website:build": "yarn workspace @docsearch/website build",
     "website:start": "yarn workspace @docsearch/website start --host 0.0.0.0",
-    "website:test": "yarn workspace @docsearch/website start --no-open"
+    "website:test": "yarn workspace @docsearch/website start --no-open",
+    "demo": "yarn workspace @docsearch/react-example start"
   },
   "devDependencies": {
     "@babel/cli": "7.23.4",
