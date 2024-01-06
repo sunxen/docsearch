@@ -70,6 +70,11 @@ export function useDocSearchKeyboardEvents({
 
     window.addEventListener('keydown', onKeyDown);
 
+    // custom event
+    window.addEventListener('toggleSearchModal', () => {
+      isOpen ? onClose() : onOpen();
+    });
+
     return () => {
       window.removeEventListener('keydown', onKeyDown);
     };
