@@ -8,9 +8,9 @@ export default function App() {
   return (
     <div>
       <DocSearch
-        indexName=""
-        appId=""
-        apiKey=""
+        indexName="nodejs-docs"
+        appId="local"
+        apiKey="local"
       />
     </div>
   );

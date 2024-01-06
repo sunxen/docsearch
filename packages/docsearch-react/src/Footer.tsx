@@ -53,7 +53,9 @@ export function Footer({ translations = {} }: FooterProps) {
   return (
     <>
       <div className="DocSearch-Logo">
-        <AlgoliaLogo translations={{ searchByText }} />
+        <a href="https://github.com/sunxen/docsearch" target="_blank" rel="noopener noreferrer">
+          <span className="DocSearch-Label" style={{ textDecoration: 'underline' }}>docsearch</span>
+        </a>
       </div>
       <ul className="DocSearch-Commands">
         <li>

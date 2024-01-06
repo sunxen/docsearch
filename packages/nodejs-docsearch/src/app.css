@@ -1,3 +1,8 @@
+:root {
+  --docsearch-primary-color: #5a8147;
+  --docsearch-highlight-color: #3e7a38;
+}
+
 #nodejs-docsearch-container {
   position: absolute;
   top: 22px;

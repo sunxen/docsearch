@@ -350,7 +350,8 @@ export function DocSearchModal({
 
       // IE11 doesn't support `scrollTo` so we check that the method exists
       // first.
-      window.scrollTo?.(0, initialScrollY);
+      // this line make bug on nodejs docs, when input enter, page not move
+      // window.scrollTo?.(0, initialScrollY);
     };
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
