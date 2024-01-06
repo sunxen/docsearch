@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-docsearch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build && zip nodejs-docsearch.zip -r dist && open .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.0.254",
+    "@types/react": "^18.2.46",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "vite": "^5.0.10"
+  },
+  "dependencies": {
+    "@algolia/autocomplete-core": "^1.13.0",
+    "react-dom": "^18.2.0"
+  }
+}
