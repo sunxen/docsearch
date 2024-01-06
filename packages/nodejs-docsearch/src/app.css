@@ -1,0 +1,10 @@
+#nodejs-docsearch-container {
+  position: absolute;
+  top: 22px;
+  right: 100px;
+  z-index: 99;
+}
+
+.is-pinned #nodejs-docsearch-container {
+  top: 6px;
+}
