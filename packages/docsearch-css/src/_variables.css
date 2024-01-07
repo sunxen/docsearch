@@ -48,7 +48,7 @@
 
 /* Darkmode */
 
-html[data-theme='dark'] {
+html.dark-mode {
   --docsearch-text-color: rgb(245, 246, 247);
   --docsearch-container-background: rgba(9, 10, 17, 0.8);
   --docsearch-modal-background: rgb(21, 23, 42);
