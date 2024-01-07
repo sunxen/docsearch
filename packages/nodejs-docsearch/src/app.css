@@ -13,3 +13,15 @@
 .is-pinned #nodejs-docsearch-container {
   top: 6px;
 }
+
+/* Avoid being affected by global styles of nodejs.org */
+.DocSearch-Container .DocSearch-Hit a:hover {
+  background: var(--docsearch-hit-background);
+}
+.DocSearch-Container .DocSearch-Hit[aria-selected='true'] a {
+  background-color: var(--docsearch-highlight-color);
+}
+.DocSearch-Container .DocSearch-Logo a:hover {
+  background: var(--docsearch-footer-background);
+}
+
