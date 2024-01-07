@@ -6,6 +6,10 @@
   "action": {
     "default_icon": "logo.png"
   },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
   "background": {
     "service_worker": "dist/background.js"
   },
@@ -14,8 +18,9 @@
       "js": ["dist/content.js"],
       "css": ["dist/assets/content.css"],
       "matches": [
-        "http://*/*",
-        "https://*/*"
+        "https://nodejs.org/docs/*",
+        "https://nodejs.org/api/*",
+        "https://nodejs.cn/api/*"
       ]
     }
   ]
