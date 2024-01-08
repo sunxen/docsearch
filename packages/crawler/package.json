@@ -1,5 +1,5 @@
 {
-  "name": "crawler",
+  "name": "@docsearch/crawler",
   "version": "1.0.0",
   "description": "",
   "type": "module",
