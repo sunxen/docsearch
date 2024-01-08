@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AlgoliaLogo } from './AlgoliaLogo';
+// import { AlgoliaLogo } from './AlgoliaLogo';
 
 export type FooterTranslations = Partial<{
   selectText: string;
@@ -47,14 +47,23 @@ export function Footer({ translations = {} }: FooterProps) {
     navigateDownKeyAriaLabel = 'Arrow down',
     closeText = 'to close',
     closeKeyAriaLabel = 'Escape key',
-    searchByText = 'Search by',
+    // searchByText = 'Search by',
   } = translations;
 
   return (
     <>
       <div className="DocSearch-Logo">
-        <a href="https://github.com/sunxen/docsearch" target="_blank" rel="noopener noreferrer">
-          <span className="DocSearch-Label" style={{ textDecoration: 'underline' }}>docsearch</span>
+        <a
+          href="https://github.com/sunxen/docsearch"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span
+            className="DocSearch-Label"
+            style={{ textDecoration: 'underline' }}
+          >
+            docsearch
+          </span>
         </a>
       </div>
       <ul className="DocSearch-Commands">

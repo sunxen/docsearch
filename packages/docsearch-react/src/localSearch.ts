@@ -1,6 +1,6 @@
 import Fuse from 'fuse.js';
 
-import links from '@docsearch/crawler';
+import links from './data/links.json';
 
 const fuse = new Fuse(
   links.map((item) => item.levels.join(' ')),

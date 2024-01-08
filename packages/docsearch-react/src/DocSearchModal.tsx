@@ -55,7 +55,7 @@ export function DocSearchModal({
   hitComponent = Hit,
   resultsFooterComponent = () => null,
   navigator,
-  initialScrollY = 0,
+  // initialScrollY = 0,
   disableUserPersonalization = false,
   initialQuery: initialQueryFromProp = '',
   translations = {},

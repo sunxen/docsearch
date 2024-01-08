@@ -1,3 +1,3 @@
-import links from './data/links.js';
+import links from './data/links.json';
 
 export default links;
