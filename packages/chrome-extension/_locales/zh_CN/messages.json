@@ -1,0 +1,8 @@
+{
+    "appName": {
+        "message": "Node.js 文档搜索"
+    },
+    "appDescription": {
+        "message": "给 Node.js 文档页面加上即时搜索功能。"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "appName": {
+        "message": "Node.js Document Search"
+    },
+    "appDescription": {
+        "message": "Add instant search functionality to the Node.js documentation page."
+    }
+}
