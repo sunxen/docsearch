@@ -1,10 +1,11 @@
 [中文](./README_zh.md)
 
-# nodejs-docsearch
+# Node.js Document Search
 
 A chrome extension to add search box to Node.js documentation.
 
 The Node.js documentation (https://nodejs.org/api/) does not have a search function, it is just a plain text page, unlike other documentation such as Vue.js (https://vuejs.org/), React (https://react.dev/) etc., which have integrated the Algolia search box, allowing you to quickly locate specific pages or methods based on keywords.
+
 This plugin adds a search box to the Node.js documentation page, perfectly embedded in the page, as if it was originally there, providing instant search capabilities, aligning with the search experience of other documentation.
 
 ## Preview

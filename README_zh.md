@@ -3,6 +3,7 @@
 一个 chrome 插件，给 Node.js 文档页面加上即时搜索功能。
 
 Node.js 的文档 (https://nodejs.org/api/) 没有搜索功能，只是单纯的文本页面，不像其他文档比如 Vue.js(https://vuejs.org/)，React(https://react.dev/) 等接入了 algolia 搜索框，能根据关键字快速定位到具体的页面或者方法。
+
 该插件就是给 Node.js 文档页面加上搜索框，完美嵌入页面之中，就像原本就有一样，提供即时搜索能力，对齐其他文档的搜索体验。
 
 ## 预览效果
