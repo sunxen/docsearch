@@ -16,7 +16,7 @@ This plugin adds a search box to the Node.js documentation page, perfectly embed
 
 ## Installation
 
-- install from [chrome store](https://chromewebstore.google.com/detail/nodejs-%E6%96%87%E6%A1%A3%E6%90%9C%E7%B4%A2/aljljpbjhedenkebeampefpecogcgekb?hl=zh-CN)
+- install from [Chrome Web Store](https://chromewebstore.google.com/detail/aljljpbjhedenkebeampefpecogcgekb)
 - or install unpacked extension: `docsearch/packages/chrome-extension`
 
 ## Usage
