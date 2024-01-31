@@ -14,7 +14,8 @@ Node.js 的文档 (https://nodejs.org/api/) 没有搜索功能，只是单纯的
 
 ## 安装
 
-- chrome 安装未打包插件: `docsearch/packages/chrome-extension`
+- 从谷歌商店安装 [Chrome Web Store](https://chromewebstore.google.com/detail/aljljpbjhedenkebeampefpecogcgekb)
+- 或者安装未打包插件: `docsearch/packages/chrome-extension`
 
 ## 使用方法
 
