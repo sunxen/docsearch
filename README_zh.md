@@ -27,7 +27,7 @@ Node.js 的文档 (https://nodejs.org/api/) 没有搜索功能，只是单纯的
 - `docsearch/crawler` 是一个 Node.js 脚本，它爬取 Node.js 文档网站，并生成一个包含所有文档的 json 文件。
 - 使用 `Fuse.js` 在 json 文件中搜索文档。
 - `docsearch/packages/docsearch-react` 是一个搜索框 UI，从 [docsearch](https://github.com/algolia/docsearch) 分支出来，并修改以支持本地搜索。
-- `docsearch/packages/nodejs-docsearch` 是一个 Chrome 扩展，它将搜索框 UI 注入到 Node.js 文档网站中。
+- `docsearch/packages/chrome-extension` 是一个 Chrome 扩展，它将搜索框 UI 注入到 Node.js 文档网站中。
 
 ## License
 

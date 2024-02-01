@@ -29,7 +29,7 @@ This plugin adds a search box to the Node.js documentation page, perfectly embed
 - `docsearch/crawler` is a nodejs script, it crawls the Node.js documentation website, and generates a json file which contains all the documentations.
 - use `Fuse.js` to search the documentations in the json file.
 - `docsearch/packages/docsearch-react` is a search box UI, fork from [docsearch](https://github.com/algolia/docsearch), and modified to support local search.
-- `docsearch/packages/nodejs-docsearch` is a chrome extension, it injects the search box UI to the Node.js documentation website.
+- `docsearch/packages/chrome-extension` is a chrome extension, it injects the search box UI to the Node.js documentation website.
 
 ## License
 
